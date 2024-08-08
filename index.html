@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>TRAVEL</title>
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <nav class="NavbarItems">
+        <h1 class="navbar-logo">Travel</h1>
+        <div class="menu-icons" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-links" href="/"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="about.html"
+              ><i class="fa-solid fa-circle-info"></i> About</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="service.html"
+              ><i class="fa-solid fa-briefcase"></i> Service</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="contact.html"
+              ><i class="fa-solid fa-address-book"></i> Contact</a
+            >
+          </li>
+
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="toggleDropdown()">
+                Language▼
+              </button>
+              <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('ქართული')">ქართული</a>
+                <a href="#" onclick="changeLanguage('English')">English</a>
+                <a href="#" onclick="changeLanguage('Russian')">Russian</a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-button" href="/login">Log In/Sign Up</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero" id="hero">
+        <img src="images/home.jpg" alt="HeroImg" />
+        <div class="hero-text">
+          <h1>Your Journey Starts Here</h1>
+          <p>Choose Your Favorite Region</p>
+        </div>
+      </div>
+    </header>
+
+    <!--main-->
+
+    <main>
+      <section>
+        <div class="destination">
+          <h1>Popular Destinations</h1>
+          <p>
+            Tours give you the opportunity to see different regions of Georgia
+          </p>
+
+          <div class="first-des">
+            <div class="des-text">
+              <h2>Svaneti</h2>
+              <p>
+                Svaneti, a historic province in northwestern Georgia, is
+                renowned for its mountainous terrain along the Greater Caucasus
+                range. It features the highest inhabited area in the Caucasus,
+                with peaks like Mount Shkhara. The region is divided into Upper
+                and Lower Svaneti, known for their deep gorges and diverse
+                landscapes ranging from mixed forests to alpine meadows. With a
+                rich history, Svaneti has preserved its unique culture,
+                including the Svan language and traditional tower houses. The
+                UNESCO-listed village of Ushguli and the region's distinct
+                polyphonic singing highlight Svaneti's cultural significance and
+                picturesque beauty.
+              </p>
+            </div>
+            <div class="image">
+              <img
+                alt="img"
+                src="https://images.unsplash.com/photo-1607443218374-a65a6d179e70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <img
+                alt="img"
+                src="https://images.unsplash.com/photo-1569498283068-140e58143192?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
+          </div>
+
+          <div class="first-des-reverse">
+            <div class="des-text">
+              <h2>Adjara</h2>
+              <p>
+                Adjara is a region in southwestern Georgia, bordered by the
+                Black Sea and Turkey. Its capital, Batumi, is Georgia's second
+                most populous city. Adjara, home to around 350,000 people,
+                features diverse landscapes from coastal lowlands to the Lesser
+                Caucasus Mountains. Historically influenced by various empires,
+                including the Ottoman and Russian Empires, Adjara retains a
+                unique cultural identity. Known for its humid climate and lush
+                forests, the region is a significant tourist destination. The
+                region's political status and autonomy are constitutionally
+                guaranteed, with governance provided by the Supreme Council and
+                the President-nominated local government.
+              </p>
+            </div>
+            <div class="image">
+              <img
+                alt="img"
+                src="https://images.unsplash.com/photo-1625566360146-918001e76064?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YWRqYXJhfGVufDB8fDB8fHww"
+              />
+              <img
+                alt="img"
+                src="https://images.unsplash.com/photo-1627482927412-8f87f6545bf3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
+          </div>
+
+          <div class="first-des">
+            <div class="des-text">
+              <h2>Kakheti</h2>
+              <p>
+                Kakheti, located in eastern Georgia, is renowned as one of the
+                country's foremost wine-producing regions, celebrated for its
+                traditional winemaking methods and diverse varietals. Home to a
+                variety of Georgian wines, Kakheti benefits from a favorable
+                climate and fertile lands that have supported viticulture for
+                millennia. The region's winemaking heritage is deeply embedded
+                in its cultural fabric, drawing visitors to its vineyards, wine
+                cellars, and wine festivals throughout the year. Kakheti's
+                significance in Georgia's wine industry underscores its role as
+                a cultural and economic hub, contributing to its rich historical
+                legacy and modern-day appeal as a top tourist destination.
+              </p>
+            </div>
+            <div class="image">
+              <img
+                alt="img"
+                src="https://images.unsplash.com/photo-1660038089730-78756c49c006?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <img
+                alt="img"
+                src="https://images.unsplash.com/photo-1668444604833-7921717914a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--footer-->
+
+    <footer class="footer">
+      <div class="top">
+        <div>
+          <h1>Travel</h1>
+          <p>Choose Your Favorite Destination</p>
+        </div>
+
+        <div>
+          <a href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com">
+            <i class="fa-brands fa-instagram-square"></i>
+          </a>
+          <a href="https://twitter.com/">
+            <i class="fa-brands fa-twitter-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <h4>Project</h4>
+          <a href="/">Changelog</a>
+          <a href="/">Status</a>
+          <a href="/">License</a>
+          <a href="/">All Versions</a>
+        </div>
+
+        <div>
+          <h4>Community</h4>
+          <a href="/">GitHub</a>
+          <a href="/">Issues</a>
+          <a href="/">Project</a>
+          <a href="/">Twitter</a>
+        </div>
+
+        <div>
+          <h4>Help</h4>
+          <a href="/">Support</a>
+          <a href="/">Troubleshooting</a>
+          <a href="/">Contact Us</a>
+        </div>
+
+        <div>
+          <h4>Others</h4>
+          <a href="/">Terms Of Service</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">License</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

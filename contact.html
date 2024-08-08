@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>TRAVEL</title>
+  </head>
+  <body>
+    <header>
+      <nav class="NavbarItems">
+        <h1 class="navbar-logo">Travel</h1>
+        <div class="menu-icons" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-links" href="/"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="about.html"
+              ><i class="fa-solid fa-circle-info"></i> About</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="service.html"
+              ><i class="fa-solid fa-briefcase"></i> Service</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="contact.html"
+              ><i class="fa-solid fa-address-book"></i> Contact</a
+            >
+          </li>
+
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="toggleDropdown()">
+                Language▼
+              </button>
+              <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('ქართული')">ქართული</a>
+                <a href="#" onclick="changeLanguage('English')">English</a>
+                <a href="#" onclick="changeLanguage('Russian')">Russian</a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-button" href="/login">Log In/Sign Up</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero" id="hero">
+        <img src="images\contact.jpg" alt="HeroImg" />
+        <div class="hero-text">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </header>
+
+    <!--footer-->
+
+    <footer class="footer">
+      <div class="top">
+        <div>
+          <h1>Travel</h1>
+          <p>Choose Your Favorite Destination</p>
+        </div>
+
+        <div>
+          <a href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com">
+            <i class="fa-brands fa-instagram-square"></i>
+          </a>
+          <a href="https://twitter.com/">
+            <i class="fa-brands fa-twitter-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <h4>Project</h4>
+          <a href="/">Changelog</a>
+          <a href="/">Status</a>
+          <a href="/">License</a>
+          <a href="/">All Versions</a>
+        </div>
+
+        <div>
+          <h4>Community</h4>
+          <a href="/">GitHub</a>
+          <a href="/">Issues</a>
+          <a href="/">Project</a>
+          <a href="/">Twitter</a>
+        </div>
+
+        <div>
+          <h4>Help</h4>
+          <a href="/">Support</a>
+          <a href="/">Troubleshooting</a>
+          <a href="/">Contact Us</a>
+        </div>
+
+        <div>
+          <h4>Others</h4>
+          <a href="/">Terms Of Service</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">License</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

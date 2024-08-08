@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>TRAVEL</title>
+  </head>
+  <body>
+    <header>
+      <nav class="NavbarItems">
+        <h1 class="navbar-logo">Travel</h1>
+        <div class="menu-icons" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-links" href="/"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="about.html"
+              ><i class="fa-solid fa-circle-info"></i> About</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="service.html"
+              ><i class="fa-solid fa-briefcase"></i> Service</a
+            >
+          </li>
+          <li>
+            <a class="nav-links" href="contact.html"
+              ><i class="fa-solid fa-address-book"></i> Contact</a
+            >
+          </li>
+
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="toggleDropdown()">
+                Language▼
+              </button>
+              <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('ქართული')">ქართული</a>
+                <a href="#" onclick="changeLanguage('English')">English</a>
+                <a href="#" onclick="changeLanguage('Russian')">Russian</a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-button" href="/login">Log In/Sign Up</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero" id="hero">
+        <img src="images\about.jpg" alt="HeroImg" />
+        <div class="hero-text">
+          <h1>About</h1>
+        </div>
+      </div>
+    </header>
+    <!--main-->
+    <main>
+      <section>
+        <div class="about-container">
+          <h1>Our History</h1>
+          <p>
+            Welcome to Georgian Journeys, where your adventure begins. Born from
+            a passion for exploring the enchanting landscapes and rich culture
+            of Georgia, our travel company was founded by a group of avid
+            travelers and locals who wanted to share the hidden gems of their
+            homeland with the world. From the historical streets of Tbilisi to
+            the serene highlands of Tusheti, the wine-rich region of Kakheti,
+            and the alpine beauty of Racha, we offer immersive experiences that
+            connect you with the heart of Georgia. Join us to create
+            unforgettable memories and discover the true essence of this
+            stunning country.
+          </p>
+
+          <h1>Our Mission</h1>
+          <p>
+            Our mission at Georgian Journeys is to provide authentic and
+            enriching travel experiences that showcase the diverse beauty,
+            culture, and traditions of Georgia. We are committed to sustainable
+            tourism practices that support local communities and preserve the
+            natural and cultural heritage of our destinations. By offering
+            personalized and carefully curated tours, we aim to inspire and
+            delight travelers, fostering a deeper understanding and appreciation
+            of Georgia’s unique charm.
+          </p>
+
+          <h1>Our Vision</h1>
+          <p>
+            Our vision is to become the leading travel company in Georgia, known
+            for our dedication to exceptional service, sustainability, and
+            cultural authenticity. We aspire to create a global community of
+            travelers who share a love for exploration and a respect for the
+            environments and cultures they visit. Through continuous innovation
+            and a commitment to excellence, we aim to make Georgian Journeys
+            synonymous with unforgettable travel experiences that leave a
+            positive impact on both our guests and the destinations we cherish.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!--footer-->
+
+    <footer class="footer">
+      <div class="top">
+        <div>
+          <h1>Travel</h1>
+          <p>Choose Your Favorite Destination</p>
+        </div>
+
+        <div>
+          <a href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com">
+            <i class="fa-brands fa-instagram-square"></i>
+          </a>
+          <a href="https://twitter.com/">
+            <i class="fa-brands fa-twitter-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <h4>Project</h4>
+          <a href="/">Changelog</a>
+          <a href="/">Status</a>
+          <a href="/">License</a>
+          <a href="/">All Versions</a>
+        </div>
+
+        <div>
+          <h4>Community</h4>
+          <a href="/">GitHub</a>
+          <a href="/">Issues</a>
+          <a href="/">Project</a>
+          <a href="/">Twitter</a>
+        </div>
+
+        <div>
+          <h4>Help</h4>
+          <a href="/">Support</a>
+          <a href="/">Troubleshooting</a>
+          <a href="/">Contact Us</a>
+        </div>
+
+        <div>
+          <h4>Others</h4>
+          <a href="/">Terms Of Service</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">License</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
