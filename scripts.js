@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1666079698872-53f4f9ecd6ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFjaGF8ZW58MHx8MHx8fDA%3D",
+        "https://images.unsplash.com/photo-1627289496743-8a9a08bb228a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       heading: "Tour in Racha",
       text: "Mountainous beauty and wines.",
       rating: 4,
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 5,
       image:
-        "https://images.unsplash.com/photo-1660038089814-36b1dd18794b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGtha2hldGl8ZW58MHx8MHx8fDA%3D",
+        "https://images.unsplash.com/photo-1688568383730-16feee3ac221?q=80&w=1893&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       heading: "Tour in Kakheti",
       text: "Cultural and wine heart.",
       rating: 4,
@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
       price: "290",
       startDate: "5 Jan 2025",
     },
-    // Add the rest of the tours here
   ];
 
   const tourList = document.getElementById("tour-list");
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to create and display the tour cards
   function displayTours(tours) {
-    tourList.innerHTML = ""; // Clear previous content
+    tourList.innerHTML = "";
     tours.forEach((tour) => {
       const tourCard = document.createElement("div");
       tourCard.className = "t-card";
@@ -129,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Function to show the tour details in a modal
   function showTourDetails(tour) {
     modal.style.display = "block";
     document.getElementById("modal-heading").textContent = tour.heading;
@@ -144,6 +142,5 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   });
 
-  // Initially display all tours
   displayTours(tours);
 });
