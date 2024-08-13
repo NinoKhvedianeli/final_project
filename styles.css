@@ -277,7 +277,7 @@
   text-align: center;
   margin: 0 auto;
   width: fit-content;
-  padding: 100px;
+  padding: 5% 10%;
 }
 
 .destination p {
@@ -310,8 +310,9 @@
 }
 
 .des-text h2 {
-  padding-bottom: 1rem;
-  padding-left: 20rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .image {
@@ -337,7 +338,9 @@
 
 @media screen and (max-width: 850px) {
   .destination {
-    margin: 4rem 6rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
   .first-des {
     display: flex;
@@ -364,8 +367,9 @@
   }
 
   .des-text h2 {
-    padding-bottom: 1rem;
-    padding-left: 12rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
 }
 
@@ -482,10 +486,18 @@ body {
 
 @media screen and (max-width: 850px) {
   .tour {
-    margin: 4rem 2rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-top: 15px;
   }
   .tourcard {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tour h1{
+    margin-top: 20px;
   }
 }
 
@@ -653,25 +665,25 @@ body {
 /*contact form main*/
 
 .form-container {
-  text-align: center;
-  margin: 0 auto;
-  width: fit-content;
-  padding: 100px;
-  color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 0px;
 }
 
 .form-container form {
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: auto;
+  width:300px;
+  
 }
 
 .form-container input {
   height: 3rem;
   padding: 0 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 0.3rem;
   border-color: 1px solid #2a2a2a;
   width: 400px;
@@ -687,24 +699,33 @@ body {
 }
 
 .form-container button {
-  display: inline;
+  
   background-color: #000;
   color: #fff;
   height: 50px;
   cursor: pointer;
+  width: 400px;
 }
 
-.form-container button:hover {
-  background-color: #000000d7;
+.form-container button:hover{
+  background-color: #000000d7
 }
 
 @media screen and (max-width: 850px) {
   .form-container {
-    margin: 4rem 2rem;
+    margin: 45px 0px;
+  };
   }
 
-  .form-container form {
+  .form-container input  {
     padding-top: 2rem;
-    width: 90%;
+    width: 300px;
   }
-}
+  .form-container textarea  {
+    padding-top: 2rem;
+    width: 300px;
+  }
+  .form-container button  {
+    padding-top: 2rem;
+    width: 300px;
+  }
