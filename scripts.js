@@ -203,11 +203,58 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   });
 
-  // Event listeners for search, sort, and filter inputs
+  
   searchInput.addEventListener("input", updateTourDisplay);
   sortSelect.addEventListener("change", updateTourDisplay);
   filterSelect.addEventListener("change", updateTourDisplay);
 
-  // Initial display of tours
+  
   updateTourDisplay();
+});
+
+
+// validate contact me form
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+ 
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const passwordRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+  if (!name) {
+    alert('Name is required.');
+    return;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  if (!subject) {
+    alert('Subject is required.');
+    return;
+  }
+
+  if (!message) {
+    alert('Message is required.');
+    return;
+  }
+
+  if (!passwordRegex.test(password)) {
+    alert('Password must be at least 6 characters long and include at least one number and one special character.');
+    return;
+  }
+
+  
+  alert('Form submitted successfully!');
+  
 });
