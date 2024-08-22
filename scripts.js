@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   ${"★".repeat(tour.rating)}${"☆".repeat(5 - tour.rating)}
               </div>
               <div class="tour-info">
-                  <p>Price: $${tour.price}</p>
+                  <p>price: $${tour.price}</p>
                   <p>Start Date: ${tour.startDate}</p>
               </div>
           `;
@@ -212,49 +212,103 @@ document.addEventListener("DOMContentLoaded", function () {
   updateTourDisplay();
 });
 
+let exchangeRates = {};
+
+function getExchangeRateById(id) {
+  fetch(`https://freetestapi.com/api/v1/currencies/${id}`, {
+    method: "GET",
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw response.status;
+      }
+      return response.json();
+    })
+    .then((exchangeRateData) => {
+      console.log("API response:", exchangeRateData);
+
+      // Store the exchange rate
+      exchangeRates[exchangeRateData.code] = exchangeRateData.exchange_rate;
+      console.log("Stored exchange rates:", exchangeRates);
+
+      // Optionally update the display if needed
+      const exchangeRate = exchangeRateData.exchange_rate;
+      const currencySymbol = exchangeRateData.symbol;
+      const currencyName = exchangeRateData.name;
+      document.getElementById(
+        "exchange-rate"
+      ).textContent += `${currencyName} (${currencySymbol}): ${exchangeRate} `;
+    })
+    .catch((error) => {
+      console.error("Error fetching exchange rates:", error);
+      const pError = document.createElement("p");
+      pError.textContent = `Error fetching exchange rate for ID ${id}`;
+      document.getElementById("data").appendChild(pError);
+    });
+}
+
+// Call the function to get and store exchange rates for GEL (ID 86) and EUR (ID 87)
+getExchangeRateById(85); // GEL
+getExchangeRateById(86); // EUR
+
+
 
 // validate contact me form
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
 
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const password = document.getElementById('password').value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const password = document.getElementById("password").value.trim();
 
- 
-  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const passwordRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{6,15}$/;
 
-  if (!name) {
-    alert('Name is required.');
-    return;
-  }
+    if (!name) {
+      alert("Name is required.");
+      return;
+    }
 
-  if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address.');
-    return;
-  }
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-  if (!subject) {
-    alert('Subject is required.');
-    return;
-  }
+    if (!subject) {
+      alert("Subject is required.");
+      return;
+    }
 
-  if (!message) {
-    alert('Message is required.');
-    return;
-  }
+    if (!message) {
+      alert("Message is required.");
+      return;
+    }
 
-  if (!passwordRegex.test(password)) {
-    alert('Password must be at least 6 characters long and include at least one number and one special character.');
-    return;
-  }
+    if (!passwordRegex.test(password)) {
+      alert(
+        "Password must be at least 6 characters long, include uppercase letter, at least one number and one special character."
+      );
+      return;
+    }
 
-  
-  alert('Form submitted successfully!');
-  
+    alert("Form submitted successfully!");
+  });
+
+  // Toggle password visibility
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordField = document.getElementById("password");
+
+  togglePassword.addEventListener("click", function () {
+    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+    passwordField.setAttribute("type", type);
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
+  });
 });
