@@ -1,3 +1,5 @@
+"use strict";
+
 // Header
 function toggleMenu() {
   const navMenu = document.querySelector(".nav-menu");
@@ -203,12 +205,10 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   });
 
-  
   searchInput.addEventListener("input", updateTourDisplay);
   sortSelect.addEventListener("change", updateTourDisplay);
   filterSelect.addEventListener("change", updateTourDisplay);
 
-  
   updateTourDisplay();
 });
 
@@ -227,11 +227,9 @@ function getExchangeRateById(id) {
     .then((exchangeRateData) => {
       console.log("API response:", exchangeRateData);
 
-      // Store the exchange rate
       exchangeRates[exchangeRateData.code] = exchangeRateData.exchange_rate;
       console.log("Stored exchange rates:", exchangeRates);
 
-      // Optionally update the display if needed
       const exchangeRate = exchangeRateData.exchange_rate;
       const currencySymbol = exchangeRateData.symbol;
       const currencyName = exchangeRateData.name;
@@ -247,11 +245,8 @@ function getExchangeRateById(id) {
     });
 }
 
-// Call the function to get and store exchange rates for GEL (ID 86) and EUR (ID 87)
 getExchangeRateById(85); // GEL
 getExchangeRateById(86); // EUR
-
-
 
 // validate contact me form
 
@@ -269,7 +264,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{6,15}$/;
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{6,15}$/;
 
     if (!name) {
       alert("Name is required.");
@@ -301,12 +297,12 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Form submitted successfully!");
   });
 
-  // Toggle password visibility
   const togglePassword = document.getElementById("togglePassword");
   const passwordField = document.getElementById("password");
 
   togglePassword.addEventListener("click", function () {
-    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+    const type =
+      passwordField.getAttribute("type") === "password" ? "text" : "password";
     passwordField.setAttribute("type", type);
     this.classList.toggle("fa-eye");
     this.classList.toggle("fa-eye-slash");
