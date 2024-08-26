@@ -219,7 +219,15 @@
   display: block;
 }
 
-.hero-text {
+.hero-text h1{
+  font-size: 3.3rem;
+  font-weight: 800;
+  color: #fff;
+  padding: 0.5rem 
+}
+
+
+.hero-text  {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -228,7 +236,7 @@
   text-align: center;
 }
 
-.hero-text h1 {
+.hero-text h2 {
   font-size: 3rem;
   font-weight: 800;
   background: #fff;
@@ -241,23 +249,6 @@
   font-weight: 800;
   color: #fff;
   padding: 0.5rem 0 2rem 0;
-}
-
-.hero-text button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hero-text button:hover {
-  background-color: #000;
-  color: #fff;
 }
 
 @media screen and (max-width: 555px) {
